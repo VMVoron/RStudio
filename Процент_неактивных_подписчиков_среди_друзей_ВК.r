@@ -41,7 +41,7 @@ tempid <-0 # creating a variable for ID
 for (k in 1:nrow(df))  { # starting a cycle for counting friends' followers
 tempid <- df[k,1]
 y = postForm('https://api.vk.com/method/users.getFollowers',
-user_id=print(tempid), access_token='b3b14b8b82d5412cbeed45c350bfdc8e505646525dffbee3c3cbea730e5e8d413b897c1415216b9a2e07c',
+user_id=print(tempid), access_token=print(access_token),
 v=5.74,
 extended="1",
 count="1000",
