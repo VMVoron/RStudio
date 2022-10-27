@@ -17,7 +17,7 @@ if (num == 1) { #first condition if sample equals 1000
   PF = postForm('https://api.vk.com/method/users.get',
                 user_ids = ids,
                 access_token = print(access_token),
-                v=5.131, # версия апи
+                v=5.131, # ГўГҐГ°Г±ГЁГї Г ГЇГЁ
                 fields = "personal") 
   head(PF)
   response_list <- fromJSON(PF, flatten = FALSE)
@@ -36,7 +36,7 @@ if (num > 1) { # second condition if sample is more than 1000
     PF = postForm('https://api.vk.com/method/users.get',
                   user_ids = ids,
                   access_token = print(access_token),
-                  v=5.131, # версия апи
+                  v=5.131, # ГўГҐГ°Г±ГЁГї Г ГЇГЁ
                   fields = "personal")
     response_list <- fromJSON(PF, flatten = FALSE)
     for (i in 1:998) { # if 999 or 1000 - returns an error (overrun)
@@ -51,18 +51,18 @@ if (num > 1) { # second condition if sample is more than 1000
 rm(k, i, id, cop, idx) # cleansing memory
 gc() #garbage collector
 ###
-colnames(rel)[1] <- "Религия"
-rel %>% group_by(Религия) # have a look into to cleanse words
-rel$Религия[grepl("Православ'я", rel$Религия)] <- "Православие"
-rel$Религия[grepl("атеист", rel$Религия)] <- "Атеизм"
-rel$Религия[grepl("Атеист", rel$Религия)] <- "Атеизм"
-rel$Религия[grepl("Христианка", rel$Религия)] <- "Христианство"
-rel$Религия[grepl("Христианин", rel$Религия)] <- "Христианство"
-rel$Религия[grepl("христианство", rel$Религия)] <- "Христианство"
+colnames(rel)[1] <- "Р РµР»РёРіРёСЏ"
+rel %>% group_by(Р РµР»РёРіРёСЏ) # have a look into to cleanse words
+rel$Р РµР»РёРіРёСЏ[grepl("РџСЂР°РІРѕСЃР»Р°РІ'СЏ", rel$Р РµР»РёРіРёСЏ)] <- "РџСЂР°РІРѕСЃР»Р°РІРёРµ"
+rel$Р РµР»РёРіРёСЏ[grepl("Р°С‚РµРёСЃС‚", rel$Р РµР»РёРіРёСЏ)] <- "РђС‚РµРёР·Рј"
+rel$Р РµР»РёРіРёСЏ[grepl("РђС‚РµРёСЃС‚", rel$Р РµР»РёРіРёСЏ)] <- "РђС‚РµРёР·Рј"
+rel$Р РµР»РёРіРёСЏ[grepl("РҐСЂРёСЃС‚РёР°РЅРєР°", rel$Р РµР»РёРіРёСЏ)] <- "РҐСЂРёСЃС‚РёР°РЅСЃС‚РІРѕ"
+rel$Р РµР»РёРіРёСЏ[grepl("РҐСЂРёСЃС‚РёР°РЅРёРЅ", rel$Р РµР»РёРіРёСЏ)] <- "РҐСЂРёСЃС‚РёР°РЅСЃС‚РІРѕ"
+rel$Р РµР»РёРіРёСЏ[grepl("С…СЂРёСЃС‚РёР°РЅСЃС‚РІРѕ", rel$Р РµР»РёРіРёСЏ)] <- "РҐСЂРёСЃС‚РёР°РЅСЃС‚РІРѕ"
 statistics <- rel %>% count(rel[,1], sort = TRUE) # sorting by number
-colnames(statistics)[1] <- "Религия" # renaming col names for better look
-colnames(statistics)[2] <- "Количество наблюдений"
-groups <- head(statistics %>% group_by(Религия), 10) # top-10 religions are given
+colnames(statistics)[1] <- "Р РµР»РёРіРёСЏ" # renaming col names for better look
+colnames(statistics)[2] <- "РљРѕР»РёС‡РµСЃС‚РІРѕ РЅР°Р±Р»СЋРґРµРЅРёР№"
+groups <- head(statistics %>% group_by(Р РµР»РёРіРёСЏ), 10) # top-10 religions are given
 groups
 save(df, groups, rel, response_list, statistics, file = "data_religion.Rdata") # saving RDA 
 
