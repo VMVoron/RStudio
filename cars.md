@@ -34,4 +34,4 @@ library(ggplot2)
 
 ggplot(data = groups, mapping = aes(x = dat$year, y = dat$x), xlab = "Body size") + ggtitle('Количество машин с нагнетателями по годам') + geom_point() + geom_line() + xlab("Год") + ylab("Количество")
 ```{r}
-![png](https://i.ibb.co/vYc1Jmt/plot-zoom.png)
+![png]('https://i.ibb.co/vYc1Jmt/plot-zoom.png')
