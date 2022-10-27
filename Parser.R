@@ -8,7 +8,7 @@
 user_id <- 48166591
 cat("Your ID is", user_id)
 #access_token <-(readline(prompt = "Enter your Access Token VK: ")) #receiving access code
-access_token <- "0b603db7a39dccc59a2f774d501bb1027e1402c4b46da45d53a394a27ec0447b9c13c1cd9268c5a978f1d"
+access_token <- "xxxx"
 cat("Your Access Token is", access_token)
 #domain <-(readline(prompt = "Enter domain: "))
 owner_id <-as.numeric(-23904) #receiving domain
