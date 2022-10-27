@@ -65,4 +65,5 @@ colnames(statistics)[2] <- "Количество наблюдений"
 groups <- head(statistics %>% group_by(Религия), 10) # top-10 religions are given
 groups
 save(df, groups, rel, response_list, statistics, file = "data_religion.Rdata") # saving RDA 
-
+'''
+![png](https://i.ibb.co/c2LHzfQ/image.jpg)
