@@ -1,4 +1,5 @@
 # Data sets for linear regression https://people.sc.fsu.edu/~jburkardt/datasets/regression/regression.html
+# current_file https://github.com/VMVoron/RStudio/blob/main/x03.txt
 ```{r}
 data <- read.table('x03.txt',              # TXT data file indicated as string or full path to the file
            header = TRUE)         # Character used to separate decimals of the numbers in the file
