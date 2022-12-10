@@ -8,7 +8,7 @@ data <- read.table('x03.txt',              # TXT data file indicated as string o
 #checking if reading is in correct format
 head(data)
 ```
-### Output
+ Output
 ```{r}
   Index One Age Blood_Pressure
 1     1   1  39            144
