@@ -40,6 +40,9 @@ y <- b0 + b1*x
 plot(data$Age, data$Blood_Pressure, main="Pair linear regression", xlab="Age (years)", ylab="Blood pressure (systolic)")
 grid()
 lines(x, y, col="red")
+```
+![png](https://i.ibb.co/FVqw233/output-17-0.png)
+```{r}
 summary(lm.data)
 ```
 Output
