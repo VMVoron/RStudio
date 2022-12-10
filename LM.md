@@ -8,7 +8,7 @@ data <- read.table('x03.txt',              # TXT data file indicated as string o
 #checking if reading is in correct format
 head(data)
 ```
- Output
+> Output
 ```{r}
   Index One Age Blood_Pressure
 1     1   1  39            144
@@ -23,7 +23,7 @@ head(data)
 lm.data <- lm(formula = Blood_Pressure ~ Age, data = data)
 lm.data$coefficients
 ```
- Output
+> Output
 ```{r}
 (Intercept)         Age 
  97.0770843   0.9493225
@@ -45,7 +45,7 @@ lines(x, y, col="red")
 ```{r}
 summary(lm.data)
 ```
-Output
+> Output
 ```{r}
 Call:
 lm(formula = Blood_Pressure ~ Age, data = data)
@@ -59,7 +59,7 @@ Residuals:
 ### Наибольшее положительное наблюдаемое отклонение от модельного: 21.153 пункта давления
 ### Наибольшее отрицательное: -19.354
 ---
-Output
+> Output
 ```{r}
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
@@ -71,7 +71,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Все коэффициенты значимы на уровне p-value < 0.001, это отмечено тремя звездочками (***) в выводе в таблице "Coefficients" \
 А также можно заметить низкие значение p-value самостоятельно в той же таблице Pr(>|t|) : 2.67e-16, 8.88e-09
 ---
-Output
+> Output
 ```{r}
 Residual standard error: 9.563 on 27 degrees of freedom
 Multiple R-squared:  0.7122,	Adjusted R-squared:  0.7015 
@@ -89,5 +89,3 @@ R² всегда будет между -∞ и 1 \
 ![png](https://github.com/VMVoron/RStudio/blob/main/image1202.jpg)
 ### F табличное при уровне значимости 0.01 = 7.6, \
 ### Полученное значение больше критического табличного: 66.81 > 7.6, значимость подтверждена по критерию Фишера
-```
- ```
