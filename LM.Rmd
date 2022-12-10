@@ -1,4 +1,5 @@
 # Data sets for linear regression https://people.sc.fsu.edu/~jburkardt/datasets/regression/regression.html
+```{r}
 data <- read.table('x03.txt',              # TXT data file indicated as string or full path to the file
            header = TRUE)         # Character used to separate decimals of the numbers in the file
 #checking if reading is in correct format
@@ -30,3 +31,4 @@ summary(lm.data)
 # F табл (a, k1, k2): a - значимость, k1 - количество факторов, k2 = n-k1-1
 # k1 = 1, k2 = 29-2 = 27
 # F табличное при увроне значимости 0.01 = 7.6, 66.81 > 7.6, значимость подтверждена по критерию Фишера
+```
