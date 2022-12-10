@@ -6,6 +6,7 @@ data <- read.table('x03.txt',              # TXT data file indicated as string o
 #checking if reading is in correct format
 head(data)
 ```
+```{r}
   Index One Age Blood_Pressure
 1     1   1  39            144
 2     3   1  45            138
@@ -13,6 +14,7 @@ head(data)
 4     5   1  65            162
 5     6   1  46            142
 6     7   1  67            170
+```
 # Calculating the parameters of linear regression using lm
 ```{r}
 lm.data <- lm(formula = Blood_Pressure ~ Age, data = data)
