@@ -1,11 +1,14 @@
 # Data sets for linear regression https://people.sc.fsu.edu/~jburkardt/datasets/regression/regression.html
 # current_file https://github.com/VMVoron/RStudio/blob/main/x03.txt
+Данный файл содержит показатели: возраст человека, кровяное давление
+Построим парную линейную регрессию зависимости давления от возраста 
 ```{r}
 data <- read.table('x03.txt',              # TXT data file indicated as string or full path to the file
            header = TRUE)         # Character used to separate decimals of the numbers in the file
 #checking if reading is in correct format
 head(data)
 ```
+Output
 ```{r}
   Index One Age Blood_Pressure
 1     1   1  39            144
@@ -20,8 +23,11 @@ head(data)
 lm.data <- lm(formula = Blood_Pressure ~ Age, data = data)
 lm.data$coefficients
 ```
+Output
+```{r}
 (Intercept)         Age 
  97.0770843   0.9493225
+ ```
 # Linear regression model -97.0771 + 0.9493 * Age
 # То есть увеличение возраста на 10 лет увеличивает давление примерно на 9.5 единиц
 ```{r}
@@ -36,6 +42,8 @@ grid()
 lines(x, y, col="red")
 summary(lm.data)
 ```
+Output
+```{r}
 Call:
 lm(formula = Blood_Pressure ~ Age, data = data)
 
@@ -73,3 +81,4 @@ F-statistic: 66.81 on 1 and 27 DF,  p-value: 8.876e-09
  k1 = 1, k2 = 29-2 = 27
  F табличное при увроне значимости 0.01 = 7.6, 66.81 > 7.6, значимость подтверждена по критерию Фишера
 ```
+ ```
