@@ -41,7 +41,7 @@ plot(data$Age, data$Blood_Pressure, main="Pair linear regression", xlab="Age (ye
 grid()
 lines(x, y, col="red")
 ```
-![png]([(https://github.com/VMVoron/RStudio/blob/main/LM.png])
+![png](https://github.com/VMVoron/RStudio/blob/main/LM.png)
 ```{r}
 summary(lm.data)
 ```
