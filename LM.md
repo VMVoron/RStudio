@@ -1,7 +1,7 @@
 > Sample Data sets for linear regression https://people.sc.fsu.edu/~jburkardt/datasets/regression/regression.html
 ## https://github.com/VMVoron/RStudio/blob/main/x03.txt
 # Данный файл содержит показатели: возраст человека, кровяное давление, записанный в формате txt
-# Построим парную линейную регрессию зависимости давления от возраста 
+# Используя язык R, построим парную линейную регрессию зависимости давления от возраста 
 ```{r}
 data <- read.table('x03.txt',              # TXT data file indicated as string or full path to the file
            header = TRUE)         # Character used to separate decimals of the numbers in the file
