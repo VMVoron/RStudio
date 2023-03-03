@@ -1,7 +1,7 @@
 library(RCurl)
 library(jsonlite)
 library(dplyr)
-access_token <-  "9c45bd8199e34b3971d8f3bc1a86e5cbc515f8d876f44123ec4acb92d8bf03d3b669a093e188650368456"
+access_token <-  "qqqqqqqqqqqqq56"
 id_1 = 440943
 id_2 = 2050007
 # first 
@@ -28,7 +28,7 @@ colnames(md2)[1] <- "id"
 colnames(md2)[2] <- "sex"
 rm(d1, d2)
 tempid <-0 # creating a variable for ID 
-# äðóçüÿ äðóçåé ïåðâîãî
+# Ã¤Ã°Ã³Ã§Ã¼Ã¿ Ã¤Ã°Ã³Ã§Ã¥Ã© Ã¯Ã¥Ã°Ã¢Ã®Ã£Ã®
 md_11 <- data.frame()
 for (k in 1:nrow(md1))  { # starting a cycle 
   print(tempid)
@@ -48,7 +48,7 @@ md_11 <- distinct(md_11)
 colnames(md_11)[1] <- "id"
 colnames(md_11)[2] <- "sex"
 rm(md_keep, k, PF1)
-# äðóçüÿ äðóçåé âòîðîãî 
+# Ã¤Ã°Ã³Ã§Ã¼Ã¿ Ã¤Ã°Ã³Ã§Ã¥Ã© Ã¢Ã²Ã®Ã°Ã®Ã£Ã® 
 md_22 <- data.frame()
 for (k in 1:nrow(md2))  { # starting a cycle 
   print(tempid)
@@ -68,14 +68,14 @@ md_22 <- distinct(md_22)
 colnames(md_22)[1] <- "id"
 colnames(md_22)[2] <- "sex"
 rm(md_keep, k, PF2, tempid)
-### ñòàòèñòèêà äëÿ äðóçåé
+### Ã±Ã²Ã Ã²Ã¨Ã±Ã²Ã¨ÃªÃ  Ã¤Ã«Ã¿ Ã¤Ã°Ã³Ã§Ã¥Ã©
 stat1 <- md1 %>% count(md1$sex, sort = TRUE)
 colnames(stat1)[1] <- "sex"
 stat1 # 1 - male, 2 female
 stat2 <- md2 %>% count(md2$sex, sort = TRUE)
 colnames(stat2)[1] <- "sex"
 stat2 
-### ñòàòèñòèêà äëÿ äðóçåé äðóçåé
+### Ã±Ã²Ã Ã²Ã¨Ã±Ã²Ã¨ÃªÃ  Ã¤Ã«Ã¿ Ã¤Ã°Ã³Ã§Ã¥Ã© Ã¤Ã°Ã³Ã§Ã¥Ã©
 
 stat_11 <- md_11 %>% count(md_11$sex, sort = TRUE)
 colnames(stat_11)[1] <- "sex"
